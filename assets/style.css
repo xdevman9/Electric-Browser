@@ -1,111 +1,104 @@
-/* Some styling to make it look good */
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background-color: #151515;
-  color: white;
-  height: 100vh;
-  width: 100vw;
-  font-family: 'IBM Plex Sans';
-}
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+  }
 
-.container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
 
-  text-align: center;
+  .navbar {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    position: relative;
+    top: 20px;
+  }
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .navbar a {
+    text-decoration: none;
+    color: #bbb;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+  }
 
-  gap: 18px;
-}
+  .navbar a:hover,
+  .navbar a.active {
+    color: #fff;
+  }
 
-.header {
-  font-size: 42px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+  }
 
-.icon {
-  height: 42px;
-  width: 42px;
-}
+  .main h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+    color: #f5f5f5;
+  }
 
-.description {
-  font-size: 16px;
-  color: #afafaf;
-}
+  .main p {
+    color: #aaa;
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
 
-.input {
-  width: 100%;
-  background-color: transparent;
-  border: 1.5px rgb(74, 74, 74) solid;
-  border-radius: 5px;
-  font-size: 14px;
-  padding: 12px;
-  text-align: center;
-  color: white;
-  outline: none;
+  .input-box {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  }
 
-  transition: color;
-  transition-duration: 100ms;
-}
+  .input-box input {
+    flex: 1;
+    padding: 16px 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: transparent;
+    color: #fff;
+  }
 
-.input:disabled {
-  color: #757575;
-}
+  .input-box button {
+    background-color: #333;
+    color: #fff;
+    padding: 0 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-.logo {
-  height: 55px;
-  width: 55px;
-  /* padding: 1.5em; */
-  will-change: filter;
-  transition: filter 300ms;
-}
+  .input-box button:hover {
+    background-color: #444;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #444;
+  }
 
-.logo:hover {
-  filter: drop-shadow(0 0 24px #685dff);
-}
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-
-  flex-shrink: 0;
-
-  padding: 18px;
-  padding-left: 24px;
-  padding-right: 30px;
-}
-
-.footer a,
-.footer a:visited {
-  cursor: pointer;
-  color: white;
-  font-size: 16px;
-  text-decoration: none;
-  text-underline-offset: 2.5px;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer div {
-  display: flex;
-  gap: 26px;
-}
+  .main small {
+    margin-top: 30px;
+    color: #777;
+    font-size: 16px;
+  }
